@@ -1,0 +1,12 @@
+v0.1版 2017.7.1
+>初版 发送字段为 uuid, actionType, timestamp, url, page, target 等
+
+v0.2版 2017.7.20
+>新增appId
+>修复timestamp时间多8小时的问题
+>timestamp存储类型由string改为number
+>修复uuid重复的问题
+
+v0.3版 2017.8.1
+>新增version版本控制
+>markInit接口参数有string单已值改为json对象
