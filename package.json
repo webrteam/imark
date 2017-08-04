@@ -1,0 +1,25 @@
+{
+  "name": "imark",
+  "version": "1.0.0",
+  "description": "user action analyze",
+  "main": "analyze.js",
+  "bin": {
+    "imark": "bin/gen.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webrteam/imark.git"
+  },
+  "keywords": [
+    "imark"
+  ],
+  "author": "Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webrteam/imark/issues"
+  },
+  "homepage": "https://github.com/webrteam/imark#readme"
+}
