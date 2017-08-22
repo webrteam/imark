@@ -1,6 +1,6 @@
-var version = '0.3';
+var version = '0.4';
 var serverPath = '';
-var AppId = '';
+var ops = '';
 
 var Ajax = function (url, data, callback) {
 	var xhr = new XMLHttpRequest();
@@ -54,35 +54,41 @@ var genUuid = function (len, radix) {
 var exp = {};
 
 // 所有埋点
-exp.Mark = function (options) {
+exp.Mark = function (options, callback) {
 	options.version = version;
 	options.timestamp = Date.now();
 	options.url = currentUrl;
 	options.page = currentPage;
-	options.appId = AppId;
-	options.uuid = markInit(AppId);
-	Ajax(`${serverPath}/service/mark`, options);
+	options.appId = ops.appId;
+	options.uuid = markInit(ops);
+	if (ops.env) {
+		options.env = ops.env;
+	}
+	Ajax(`${serverPath}/service/mark`, options, callback);
 };
 
 // 按钮埋点
-exp.markPicker = function (target) {
+exp.markPicker = function (target, callback) {
 	var actionType = 'pick';
-	exp.Mark({actionType, target});
+	exp.Mark({actionType, target}, callback);
 };
 
 var currentUrl = '';
 var currentPage = '';
 
 // 页面记录
-exp.markPage = function (url, page) {
+exp.markPage = function (url, page, callback) {
 	currentUrl = url;
 	currentPage = page;
 	var actionType = 'enter';
-	exp.Mark({actionType});
+	exp.Mark({actionType}, callback);
 };
 
-exp.markInit = function(_appId){
-	AppId = _appId;
+exp.markInit = function(_ops){
+	if (typeof(_ops) != 'object'){
+		_ops = {appId: _ops};
+	}
+	ops = _ops;
 	if (!localStorage.shanyinUuid) {
 		//localStorage.shanyinUuid = genUuid(64);
 		localStorage.shanyinUuid = genUuid(16); //暂时

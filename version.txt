@@ -10,3 +10,8 @@ v0.2版 2017.7.20
 v0.3版 2017.8.1
 >新增version版本控制
 >markInit接口参数有string单已值改为json对象
+
+v0.4版 2017.8.22
+>新增duration停留时间/leaveTime离开时间两个字段 新增actionType类型leave
+>markInit接口参数改为Object类型, 新增env环境字段
+>新增userId字段
