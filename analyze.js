@@ -1,4 +1,4 @@
-var version = '0.4';
+var version = '0.5';
 var serverPath = '';
 var ops = '';
 
