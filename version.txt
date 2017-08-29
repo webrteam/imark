@@ -15,3 +15,6 @@ v0.4版 2017.8.22
 >新增duration停留时间/leaveTime离开时间两个字段 新增actionType类型leave
 >markInit接口参数改为Object类型, 新增env环境字段
 >新增userId字段
+
+v0.5版 2017.8.28
+>新增babel和webpack,运行命令行webpack,将根目录下analyze.js转换为ES5后压缩打包到dist文件夹下
