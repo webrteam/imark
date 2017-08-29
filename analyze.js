@@ -100,7 +100,7 @@ if (typeof module === 'object') {
 	module.exports = exp;
 }
 else {
-	for (k in exp) {
+	for (var k in exp) {
 		window[k] = exp[k];
 	}
 }
