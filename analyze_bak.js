@@ -1,6 +1,6 @@
-var version = '0.5';
+var version = '0.4';
 var serverPath = '';
-var ops = '';
+var ops = {};
 
 var Ajax = function (url, data, callback) {
 	var xhr = new XMLHttpRequest();
