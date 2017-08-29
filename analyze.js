@@ -60,7 +60,7 @@ exp.Mark = function (options, callback) {
 	options.url = currentUrl;
 	options.page = currentPage;
 	options.appId = ops.appId;
-	options.uuid = markInit(ops);
+	options.uuid = exp.markInit(ops);
 	if (ops.env) {
 		options.env = ops.env;
 	}

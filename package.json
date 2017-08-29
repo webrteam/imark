@@ -1,6 +1,6 @@
 {
   "name": "imark",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "user action analyze",
   "main": "./dist/analyze.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir dist && babel analyze.js -o dist/analyze.js && uglifyjs dist/analyze.js -o dist/analyze.js"
+    "build": "mkdir dist && babel analyze.js -o dist/analyze.js && uglifyjs dist/analyze.js -o dist/analyze.js && uglifyjs dist/analyze.js -o analyze-min.js"
   },
   "repository": {
     "type": "git",
