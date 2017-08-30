@@ -1,6 +1,11 @@
 var version = '0.5';
-var serverPath = '';
-var ops = {};
+
+// 默认参数
+var ops = {
+	appId: '',
+	servicePath: '/service',
+	env: ''
+};
 
 var Ajax = function (url, data, callback) {
 	var xhr = new XMLHttpRequest();
@@ -66,7 +71,7 @@ exp.Mark = function (options, callback) {
 	options.page = ops.page;
 	options.appId = ops.appId;
 	options.uuid = exp.getUuid();
-	Ajax(`${serverPath}/service/mark`, options, callback);
+	Ajax(`${ops.servicePath}/mark`, options, callback);
 };
 
 // 按钮埋点
@@ -89,7 +94,7 @@ exp.markInit = function(_ops){
 	if (typeof(_ops) != 'object'){
 		_ops = {appId: _ops};
 	}
-	ops = _ops;
+	Object.assign(ops, _ops);
 	return exp.getUuid();
 };
 
