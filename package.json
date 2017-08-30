@@ -1,7 +1,7 @@
 {
   "name": "imark",
   "version": "0.5.7",
-  "description": "user action analyze",
+  "description": "user action mark and analyze",
   "main": "./dist/analyze.js",
   "bin": {
     "imark": "bin/gen.js"
