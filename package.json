@@ -1,6 +1,6 @@
 {
   "name": "imark",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "description": "user action mark and analyze",
   "main": "./imark.min.js",
   "scripts": {
