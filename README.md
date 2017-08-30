@@ -3,7 +3,7 @@
 
 引入方法:
 - 1.模块化: `require('imark');`
-- 2.单文件: <script src="node_modules/imark/imark.min.js"></script>
+- 2.单文件: `<script src="node_modules/imark/imark.min.js"></script>`
 
 初始化:
 ```

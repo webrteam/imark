@@ -1,14 +1,11 @@
 {
   "name": "imark",
-  "version": "0.5.7",
+  "version": "0.5.10",
   "description": "user action mark and analyze",
-  "main": "./dist/analyze.js",
-  "bin": {
-    "imark": "bin/gen.js"
-  },
+  "main": "./imark.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir dist && babel analyze.js -o dist/analyze.js && uglifyjs dist/analyze.js -o dist/analyze.js && uglifyjs dist/analyze.js -o analyze-min.js"
+    "build": "node ./build/build.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +24,7 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
+    "ifun": "0.2.8",
     "uglify-js": "^3.0.28"
   }
 }
